@@ -1,0 +1,329 @@
+<header class="header">
+    <div class="header__top py-3 d-lg-block d-none">
+        <div class="container">
+            <div class="row row-gap-4">
+                <div class="col flex-grow-1">
+                    <ul class="header__list d-flex flex-wrap align-items-center gap-4">
+                        <li class="header__item">
+                            <button class="header__button d-flex align-items-center gap-1 bg-transparent border-0">
+                                <img class="header__icon" width="20px" src="src/images/icon/eg-Egypt.svg"
+                                    alt="language icon" />
+                                <span class="header__lang">العربية</span>
+                            </button>
+                        </li>
+                        <li class="header__item">
+                            <div class="header__dropdown dropdown">
+                                <button
+                                    class="header__dropdown-toggle btn btn-secondary dropdown-toggle d-flex align-items-center gap-2"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="header__dropdown-icon" width="20px"
+                                        src="src/images/icon/location.svg" />
+                                    <span class="header__dropdown-text">Shobra , Cairo</span>
+                                </button>
+                                <div class="header__dropdown-menu dropdown-menu">
+                                    <div class="d-flex flex-column row-gap-3">
+                                        <div class="responsive-map">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889"
+                                                width="600" height="450" frameborder="0" style="border:0"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <p class="header__dropdown-title text-center">Select your delivery address</p>
+                                        <span class="header__dropdown-description d-block text-center">Where do you want
+                                            your Tallah package to arrive?</span>
+                                        <button
+                                            class="header__dropdown-button secondary d-flex align-items-center justify-content-center w-100">
+                                            Locate Me
+                                        </button>
+                                        <button
+                                            class="header__dropdown-button bg-transparent outline-secondary d-flex align-items-center justify-content-center w-100">
+                                            Skip Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <ul class="header__list d-flex align-items-center gap-3">
+                        <li class="header__item">
+                            <a class="header__link d-flex align-items-center gap-2 text-white" href="tel:+01222885514">
+                                <img class="header__icon" src="src/images/icon/phone.svg" alt="phone icon" />
+                                <span class="header__text">01222885514</span>
+                            </a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link d-flex align-items-center gap-2 text-white"
+                                href="mailto:info@talah.net">
+                                <img class="header__icon" src="src/images/icon/mail.svg" alt="mail icon" />
+                                <span class="header__text">info@talah.net</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="header__middle">
+        <div class="container position-relative">
+            <div class="row row-gap-3 align-items-center">
+                <div class="col-xl-3 col-lg-3 col-md-12 col-12">
+                    <a href="#" class="brand">
+                        <img width="80px" src="src/images/logo-header.svg" alt="Logo" />
+                    </a>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-12 col-12">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 col-md-12 col-12">
+                            <div class="input-group d-flex align-items-center gap-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text d-flex align-items-center justify-content-center"
+                                        id="basic-addon1">
+                                        <img src="src/images/icon/search-product.svg" alt="image" />
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control border-0 bg-transparent p-0"
+                                    placeholder="What are you looking for today?">
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-12 col-12">
+                            <ul class="list-option d-flex flex-wrap align-items-center justify-content-end gap-3">
+                                <li class="position-relative">
+                                    <a href="#" class="d-flex align-items-center gap-2">
+                                        <img src="src/images/icon/profile.svg" />
+                                        <span class="d-lg-flex  d-none">Login</span>
+                                    </a>
+                                </li>
+                                <li class="position-relative">
+                                    <a href="#" class="d-flex align-items-center gap-2">
+                                        <img src="src/images/icon/favorite.svg" />
+                                        <span class="d-lg-flex  d-none">favorite</span>
+                                    </a>
+                                </li>
+                                <li class="position-relative">
+                                    <a href="#" class="d-flex align-items-center gap-2">
+                                        <img src="src/images/icon/cart.svg" />
+                                        <span class="d-lg-flex  d-none">cart</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="header__bottom">
+        <div class="container">
+            <nav class="navbar">
+                <section class="navbar-left">
+                    <div class="burger" id="burger">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </div>
+                </section>
+                <section class="navbar-center">
+                    <span class="overlay"></span>
+                    <div class="menu" id="menu">
+                        <div class="menu-header">
+                            <span class="menu-arrow">
+                                <img src="src/images/icon/arrow-up.svg" alt="icon"/>
+                            </span>
+                            <span class="menu-title"></span>
+                        </div>
+                        <ul class="menu-inner">
+                            <li class="menu-item menu-dropdown">
+                                <span class="menu-link d-flex align-items-center  gap-2">
+                                    <span>Skin Care</span>
+                                    <img width="10px" src="src/images/icon/arrow-down.svg" alt="icon" />
+                                </span>
+                                <div class="submenu megamenu megamenu-column-4">
+                                    <div class="submenu-inner">
+                                        <h4 class="submenu-title">face makeup</h4>
+                                        <ul class="submenu-list">
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>masks</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>Sunscreen</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>Serum</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu-inner">
+                                        <h4 class="submenu-title">Eyes Makeup</h4>
+                                        <ul class="submenu-list">
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>masks</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>masks</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu-inner">
+                                        <h4 class="submenu-title">Blush</h4>
+                                        <ul class="submenu-list">
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>masks</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>masks</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu-inner">
+                                        <h4 class="submenu-title">Feature Sale  🔥</h4>
+                                        <img src="src/images/img/product.png" class="submenu-image"
+                                            alt="Product">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item menu-dropdown">
+                                <span class="menu-link d-flex align-items-center  gap-2">
+                                    <span>Hair Care</span>
+                                    <img width="10px" src="src/images/icon/arrow-down.svg" alt="icon" />
+                                </span>
+                                <div class="submenu megamenu megamenu-column-4">
+                                    <div class="submenu-inner">
+                                        <h4 class="submenu-title">face makeup</h4>
+                                        <ul class="submenu-list">
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>masks</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>Sunscreen</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>Serum</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu-inner">
+                                        <h4 class="submenu-title">Eyes Makeup</h4>
+                                        <ul class="submenu-list">
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>masks</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>masks</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu-inner">
+                                        <h4 class="submenu-title">Blush</h4>
+                                        <ul class="submenu-list">
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>masks</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                            <li class="submenu-item">
+                                                <a href="#" class="submenu-link d-flex align-items-center justify-content-between gap-1">
+                                                    <span class="d-flex align-items-center gap-1">
+                                                        <img src="src/images/img/sub-category.png" alt="image" />
+                                                        <span>masks</span>
+                                                    </span>
+                                                    <img src="src/images/icon/arrow-down.svg" alt="image" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="submenu-inner">
+                                        <h4 class="submenu-title">Feature Sale  🔥</h4>
+                                        <img src="src/images/img/product.png" class="submenu-image"
+                                            alt="Product">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item"><a href="#" class="menu-link">Korean Products</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">Natural Products</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </nav>
+        </div>
+    </div>
+</header>

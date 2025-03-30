@@ -1,0 +1,33 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+    scroll-behavior: initial;
+    overflow-x: hidden !important;
+}
+body {
+    font-size: 16px;
+    vertical-align: baseline;
+    overflow-x: hidden !important;
+    font-weight: 400;
+    font-style: normal;
+    font-family: $font-family-base;
+    &.modal-open{
+        padding: 0 !important;
+    }
+}
+.progress-container{
+    .progress{
+        height: 4px;
+        border-radius: 100px;
+        background: var(--gray);
+        @media (min-width: 588px) {
+            width: 350px;
+        }
+        @media (max-width: 587.98px) {
+            width: calc(100% - 65px);
+        }
+        .progress-bar{
+            background: var(--yellow-color);
+        }
+    }
+}

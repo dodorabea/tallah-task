@@ -1,0 +1,79 @@
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1)+$replace+str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: woff2 woff ttf svg eot otf) {
+    $src: null;
+    $extmods: ( svg: "#" + str-replace($name, " ", "_"));
+    $formats: ( ttf: "truetype");
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+        font-display: swap;
+    }
+}
+
+@include font-face("Dubai-Light",
+"src/assets/fonts/Dubai-Light",
+normal,
+normal,
+woff2 woff ttf eot otf);
+/*---------*/
+@include font-face("Dubai-Regular",
+"src/assets/fonts/Dubai-Regular",
+normal,
+normal,
+woff2 woff ttf eot otf);
+
+/*---------*/
+
+@include font-face("Dubai-Medium",
+"src/assets/fonts/Dubai-Medium",
+normal,
+normal,
+woff2 woff ttf eot otf);
+
+/*---------*/
+@include font-face("Dubai-Bold",
+"src/assets/fonts/Dubai-Bold",
+normal,
+normal,
+woff2 woff ttf eot otf);
+
+// @include position(absolute, 0, 0, 0, 0);
+@mixin position($type,  $top : null, $right : null, $bottom : null, $left : null ) {
+    position: $type;
+    @if ($top != null) {
+        top: $top;
+    }
+    @if ($bottom != null) {
+        bottom: $bottom;
+    }
+     html[dir=rtl] & {
+        @if ($right != null) {
+            right: $right;
+        }
+        @if ($left != null) {
+            left: $left;
+        }
+    }
+     html[dir=ltr] & {
+        @if ($left != null) {
+            right: $left;
+        }
+        @if ($right != null) {
+            left: $right;
+        }
+    }
+}

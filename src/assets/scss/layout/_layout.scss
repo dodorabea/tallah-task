@@ -1,0 +1,332 @@
+.help-when-you-need {
+    padding: 2rem 0;
+
+    &__card {
+        &-icon {
+            inline-size: 50px;
+            min-inline-size: 50px;
+            max-inline-size: 50px;
+            block-size: 50px;
+            background: rgba(249, 167, 196, 0.4);
+            border-radius: 10px;
+        }
+
+        &-text {
+            .card-title {
+                text-transform: capitalize;
+                font-family: $font-family-Bold;
+
+                @media (min-width: 1400px) {
+                    font-size: 1.125rem;
+                }
+
+                @media (max-width: 1399.98px) {
+                    font-size: 1rem;
+                }
+            }
+
+            .card-description {
+                font-size: 0.875rem;
+                color: rgba(87, 87, 87, 1);
+                font-family: $font-family-medium;
+            }
+        }
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*-----------------------
+    Global Styles
+-------------------------*/
+.accordion-header {
+    .accordion-button {
+        box-shadow: none;
+        background: rgba(255, 204, 223, 0.15);
+        color: rgba(30, 30, 30, 1);
+        font-size: 1.125rem;
+        border-radius: 10px !important;
+        font-family: $font-family-medium;
+
+        &::after {
+            background-size: 16px;
+            transform: rotate(270deg);
+        }
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        transform: rotate(360deg);
+    }
+
+}
+.nav-tabs {
+    .nav-link{
+        border: 0 !important;
+        &:not(.active){
+            color: #575757;
+            font-family: $font-family-medium;
+        }
+        &.active{
+        border-radius: 4px;
+        border: 0;
+        border-bottom: 3px solid var(--primary-color) !important;
+        font-family: $font-family-Bold;
+        }
+}
+}
+.tab-content {
+    padding-top: 2.5rem;
+}
+
+.tab-pane {
+    &.overview-tapscontent {
+        .overview-tapscontent__description-content{
+            padding-inline-end: 2rem;
+            position: relative;
+            &::after
+            {
+                @media (min-width: 992px) {
+                    content: '';
+                    @include position(absolute, 0, unset, 0, 1rem);
+                    height: 100%;
+                    width: 1px;
+                    background: #E4E7E9;
+                }
+            }
+        }
+        
+        h4 {
+            color: #1E1E1E;
+            font-size: 1.3rem;
+            font-family: $font-family-medium;
+        }
+
+        p {
+            color: #8F8F8F;
+            font-size: 0.938rem;
+            line-height: 23px;
+            font-family: $font-family-medium;
+        }
+    }
+
+    .product-ratings-reviews {
+        &__item {
+            padding: 2rem 0;
+
+            &:not(:first-child) {
+                border-top: 1px solid rgba(199, 199, 199, 1);
+            }
+        }
+
+        &__short-name {
+            font-size: 18px;
+            inline-size: 36px;
+            min-inline-size: 36px;
+            max-inline-size: 36px;
+            block-size: 36px;
+            border-radius: 100%;
+            background: var(--secondary-color-2);
+            text-transform: capitalize;
+            color: #fff;
+            font-family: $font-family-medium;
+        }
+
+        &__author {
+            font-size: 1.125rem;
+            text-transform: capitalize;
+            font-family: $font-family-medium;
+        }
+
+        &__time {
+            font-size: 0.875rem;
+            color: rgba(143, 143, 143, 1);
+        }
+
+        &__rating {
+            img {
+                filter: brightness(0) saturate(100%) invert(90%) sepia(8%) saturate(4967%) hue-rotate(326deg) brightness(104%) contrast(99%);
+            }
+        }
+
+        &__comment {
+            font-size: 0.875rem;
+            line-height: 1.125rem;
+            color: rgba(143, 143, 143, 1);
+            font-family: $font-family-medium;
+        }
+
+        &__show-more {
+            text-transform: capitalize;
+            min-height: 47px;
+            border: 1px solid var(--secondary-color-2);
+            border-radius: 10px;
+            font-family: $font-family-Bold;
+            -webkit-transition: all 1s ease-out;
+            transition: all 1s ease-out;
+
+            &:not(:hover) {
+                color: var(--black);
+            }
+
+            &:hover {
+                color: #fff;
+                background: var(--secondary-color);
+            }
+
+            @media (min-width: 400px) {
+                min-width: 285px;
+            }
+
+            @media (max-width: 399.98px) {
+                min-width: 100%;
+            }
+        }
+    }
+
+    .product-ratings {
+        &__box {
+            padding: 2rem 1rem;
+            min-height: 160px;
+            border-radius: 10px;
+            background: var(--primary-color-opacity-5);
+
+            @media (max-width: 575.98px) {
+                min-width: 100%;
+            }
+        }
+
+        &__rating-percentage {
+            .product-ratings__star {
+                &.active {
+                    img {
+                        filter: brightness(0) saturate(100%) invert(90%) sepia(8%) saturate(4967%) hue-rotate(326deg) brightness(104%) contrast(99%);
+                    }
+                }
+            }
+        }
+
+        &__rate {
+            color: var(--black);
+            font-size: 2rem;
+            font-family: $font-family-Bold;
+        }
+
+        &__stars-list {
+            filter: brightness(0) saturate(100%) invert(90%) sepia(8%) saturate(4967%) hue-rotate(326deg) brightness(104%) contrast(99%);
+        }
+
+        &__review-count {
+            font-size: 0.938rem;
+            color: #575757;
+            text-transform: capitalize;
+            font-family: $font-family-medium;
+        }
+
+        &__percentage {
+            color: #3C3C48;
+            font-size: 0.875rem;
+            font-family: $font-family-medium;
+        }
+
+        &__btn {
+            font-size: 1.063rem;
+            min-height: 47px;
+            background: var(--secondary-color-2);
+            border: 1px solid var(--secondary-color-2);
+            border-radius: 10px;
+            color: #fff;
+            font-family: $font-family-Bold;
+        }
+    }
+}
+/*-----------------------
+    Modal Styles
+-------------------------*/
+.modal{
+    .modal-content{
+        border-radius: 10px;
+        padding: 1.5rem;
+        border: 1px solid rgba(234, 233, 233, 1);
+        box-shadow: 0.25px 0.5px 0px 0px rgba(0, 0, 0, 0.2);
+        .modal-header{
+            .btn-close{
+                font-size: 1.5rem;
+                inline-size: 40px;
+                min-inline-size: 40px;
+                max-inline-size: 40px;
+                block-size: 40px;
+                background: var( --secondary-color-2);
+                border-radius: 100%;
+                opacity: 1;
+                color: #fff;
+                box-shadow: none;
+                @media (min-width: 568px) {
+                    @include position(absolute, -32px, unset, unset, -32px);
+                }
+                @media (max-width: 567.98px) {
+                    @include position(absolute, -24px, unset, unset, -24px);
+                }
+            }
+        }
+        .modal-body{
+            h3{
+                color: var(--black);
+                margin-bottom: 2rem;
+                font-family: $font-family-Bold;
+                @media (min-width: 568px) {
+                    font-size: 1.25rem;
+                }
+                @media (max-width: 567.98px) {
+                    font-size: 1rem;
+                }
+            }
+            .form-control{
+                box-shadow: none;
+                resize: none;
+                padding: 1rem;
+                border: 1px solid #F7F8F8;
+                border-radius: 10px;
+                background: #F7F8F866;
+
+            }
+            ul{
+                img{
+                    @media (min-width: 568px) {
+                        width: 50px;
+                    }
+                    @media (max-width: 567.98px) {
+                        width: 30px;
+                    }
+                }
+            }
+        }
+        .modal-footer{
+            .btn{
+                font-size: 1rem;
+                min-height: 47px;
+                font-family: $font-family-Bold;
+                &-outline-primary{
+                    color: var(--black);
+                    border: 1px solid var(--secondary-color-2);
+                }
+                &-primary{
+                    background: var(--secondary-color-2);
+                    border: 1px solid var(--secondary-color-2);
+                }
+            }
+            @media (min-width: 568px) {
+                display: flex;
+            }
+            @media (max-width: 567.98px) {
+                display: block;
+                .btn{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
