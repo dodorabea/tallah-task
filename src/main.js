@@ -29,6 +29,7 @@ function loadHTML(id, file, callback) {
 loadHTML("header", "/header.html", () => {
   initializeMenu();
 });
+loadHTML("store", "/store.html");
 loadHTML("taps", "/taps.html");
 loadHTML("grid", "/grid.html", () => {
   const swiper = new Swiper('.swiper', {

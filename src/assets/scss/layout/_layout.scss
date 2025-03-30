@@ -1,3 +1,83 @@
+/*-----------------------
+    store-category
+-------------------------*/
+.store-category {
+    .store-category {
+        &__title {
+            color: var(--black);
+            font-family: $font-family-Bold;
+            @media (min-width: 768px) {
+                font-size: 1.5rem;
+            }
+            @media (max-width: 767.98px) {
+                font-size: 1rem;
+            }
+        }
+        &__rating{
+            li{
+                img{
+                    width: 20px;
+                    filter: brightness(0) saturate(100%) invert(90%) sepia(8%) saturate(4967%) hue-rotate(326deg) brightness(104%) contrast(99%);
+                }
+                span{
+                    color: #575757;
+                    font-family: $font-family-medium;
+                }
+            }
+        }
+        &__current-price{
+            font-size: 1.3rem;
+            color: #27AE60;
+            font-family: $font-family-Bold;
+        }
+        &__vat{
+            color: #8F8F8F;
+            font-size: 0.875rem;
+        }
+        &__old-price{
+            del{
+                color: #E74C3C;
+                font-family: $font-family-medium;
+            }
+            span{
+                border-radius: 5px;
+                padding: 0 6px;
+                min-width: 70px;
+                min-height: 22px;
+                background: #94F5BC;
+                color: #0DA367;
+                font-family: $font-family-medium;
+            }
+        }
+        &__brand-name{
+            color: #575757;
+            span{
+                color: var(--black);
+                font-family: $font-family-medium;
+            }
+        }
+        &__input-color{
+            input{
+                border-color: transparent;
+                border-radius: 10px;
+                inline-size: 40px;
+                min-inline-size: 40px;
+                max-inline-size: 40px;
+                block-size: 40px;
+                overflow: hidden;
+            }
+            label{
+                color: #8F8F8F;
+                font-size: 0.875rem;
+                font-family: $font-family-medium;
+            }
+        }
+    }
+}
+
+/*-----------------------
+    help-when-you-need
+-------------------------*/
 .help-when-you-need {
     padding: 2rem 0;
 
@@ -63,32 +143,36 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
 }
+
 .nav-tabs {
-    .nav-link{
+    .nav-link {
         border: 0 !important;
-        &:not(.active){
+
+        &:not(.active) {
             color: #575757;
             font-family: $font-family-medium;
         }
-        &.active{
-        border-radius: 4px;
-        border: 0;
-        border-bottom: 3px solid var(--primary-color) !important;
-        font-family: $font-family-Bold;
+
+        &.active {
+            border-radius: 4px;
+            border: 0;
+            border-bottom: 3px solid var(--primary-color) !important;
+            font-family: $font-family-Bold;
         }
+    }
 }
-}
+
 .tab-content {
     padding-top: 2.5rem;
 }
 
 .tab-pane {
     &.overview-tapscontent {
-        .overview-tapscontent__description-content{
+        .overview-tapscontent__description-content {
             padding-inline-end: 2rem;
             position: relative;
-            &::after
-            {
+
+            &::after {
                 @media (min-width: 992px) {
                     content: '';
                     @include position(absolute, 0, unset, 0, 1rem);
@@ -98,7 +182,7 @@ input[type=number]::-webkit-outer-spin-button {
                 }
             }
         }
-        
+
         h4 {
             color: #1E1E1E;
             font-size: 1.3rem;
@@ -243,48 +327,56 @@ input[type=number]::-webkit-outer-spin-button {
         }
     }
 }
+
 /*-----------------------
     Modal Styles
 -------------------------*/
-.modal{
-    .modal-content{
+.modal {
+    .modal-content {
         border-radius: 10px;
         padding: 1.5rem;
         border: 1px solid rgba(234, 233, 233, 1);
         box-shadow: 0.25px 0.5px 0px 0px rgba(0, 0, 0, 0.2);
-        .modal-header{
-            .btn-close{
+
+        .modal-header {
+            .btn-close {
                 font-size: 1.5rem;
                 inline-size: 40px;
                 min-inline-size: 40px;
                 max-inline-size: 40px;
                 block-size: 40px;
-                background: var( --secondary-color-2);
+                background: var(--secondary-color-2);
                 border-radius: 100%;
                 opacity: 1;
                 color: #fff;
                 box-shadow: none;
+
                 @media (min-width: 568px) {
                     @include position(absolute, -32px, unset, unset, -32px);
                 }
+
                 @media (max-width: 567.98px) {
                     @include position(absolute, -24px, unset, unset, -24px);
                 }
             }
         }
-        .modal-body{
-            h3{
+
+        .modal-body {
+            h3 {
                 color: var(--black);
                 margin-bottom: 2rem;
                 font-family: $font-family-Bold;
+
                 @media (min-width: 568px) {
                     font-size: 1.25rem;
                 }
+
                 @media (max-width: 567.98px) {
                     font-size: 1rem;
                 }
             }
-            .form-control{
+
+            .form-control {
                 box-shadow: none;
                 resize: none;
                 padding: 1rem;
@@ -293,37 +385,45 @@ input[type=number]::-webkit-outer-spin-button {
                 background: #F7F8F866;
 
             }
-            ul{
-                img{
+
+            ul {
+                img {
                     @media (min-width: 568px) {
                         width: 50px;
                     }
+
                     @media (max-width: 567.98px) {
                         width: 30px;
                     }
                 }
             }
         }
-        .modal-footer{
-            .btn{
+
+        .modal-footer {
+            .btn {
                 font-size: 1rem;
                 min-height: 47px;
                 font-family: $font-family-Bold;
-                &-outline-primary{
+
+                &-outline-primary {
                     color: var(--black);
                     border: 1px solid var(--secondary-color-2);
                 }
-                &-primary{
+
+                &-primary {
                     background: var(--secondary-color-2);
                     border: 1px solid var(--secondary-color-2);
                 }
             }
+
             @media (min-width: 568px) {
                 display: flex;
             }
+
             @media (max-width: 567.98px) {
                 display: block;
-                .btn{
+
+                .btn {
                     width: 100%;
                 }
             }
